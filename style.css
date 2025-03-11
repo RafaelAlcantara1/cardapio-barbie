@@ -42,7 +42,7 @@ nav ul {
     padding: 0;
     margin: 0;
     display: flex;
-    justify-content: center; /* Centraliza os links */
+    justify-content: center;
 }
 
 nav ul li {
@@ -64,13 +64,13 @@ main {
     padding: 40px;
     display: flex;
     flex-direction: column;
-    align-items: center; /* Centraliza o conteúdo do main */
+    align-items: center;
 }
 
 .menu-section {
     margin-bottom: 40px;
     width: 100%;
-    max-width: 1200px; /* Limita a largura das seções */
+    max-width: 1200px;
 }
 
 .menu-section h2 {
@@ -84,7 +84,7 @@ main {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     gap: 20px;
-    justify-items: center; /* Garante que os itens do cardápio fiquem centralizados */
+    justify-items: center;
 }
 
 .menu-item {
@@ -94,11 +94,18 @@ main {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     text-align: center;
     padding: 20px;
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
 }
 
 .menu-item:hover {
     transform: translateY(-5px);
+}
+
+.menu-item:focus,
+.menu-item:active {
+    transform: scale(1.1);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
 }
 
 .menu-item img {
