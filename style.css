@@ -35,6 +35,30 @@ nav {
     background-color: #ff66b2;
     padding: 10px 0;
     text-align: center;
+    position: relative;
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+}
+
+.hamburger {
+    display: none; 
+    flex-direction: column;
+    cursor: pointer;
+    margin: 0 auto; 
+}
+
+.hamburger .line {
+    width: 30px;
+    height: 3px;
+    background-color: white;
+    margin: 4px 0;
+    transition: 0.3s;
+}
+
+#nav-links {
+    display: flex; 
+    justify-content: center;
 }
 
 nav ul {
@@ -142,15 +166,26 @@ footer {
 }
 
 @media (max-width: 768px) {
-    header h1 {
-        font-size: 2em;
+    .hamburger {
+        display: flex; 
+    }
+
+    #nav-links {
+        display: none; 
+        flex-direction: column;
+        position: absolute;
+        top: 60px; 
+        left: 0;
+        right: 0;
+        background-color: #ff66b2;
+        z-index: 1;
+    }
+
+    #nav-links.active {
+        display: flex; 
     }
 
     nav ul li {
-        margin: 0 10px;
-    }
-
-    .menu-items {
-        grid-template-columns: 1fr;
+        margin: 10px 0; 
     }
 }

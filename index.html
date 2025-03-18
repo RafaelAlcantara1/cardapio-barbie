@@ -15,7 +15,12 @@
     </header>
 
     <nav>
-        <ul>
+        <div class="hamburger" id="hamburger">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+        <ul id="nav-links">
             <li><a href="#entradas">Entradas</a></li>
             <li><a href="#pratos-principais">Pratos Principais</a></li>
             <li><a href="#sobremesas">Sobremesas</a></li>
@@ -117,5 +122,14 @@
     <footer>
         <p>© Restaurante Barbie 2024</p>
     </footer>
+
+    <script>
+        const hamburger = document.getElementById('hamburger');
+        const navLinks = document.getElementById('nav-links');
+    
+        hamburger.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+    </script>
 </body>
 </html>
